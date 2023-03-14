@@ -47,7 +47,7 @@ async function checkFileStartsWithHeader(filePath) {
             const check = await octokit.rest.checks.create({
                 owner: github.context.repo.owner,
                 repo: github.context.repo.repo,
-                name: 'Readme Validator',
+                name: 'ATC Results',
                 head_sha: github.context.sha,
                 status: 'completed',
                 conclusion: 'warning',
@@ -59,7 +59,7 @@ async function checkFileStartsWithHeader(filePath) {
                             path: 'README.md',
                             start_line: 1,
                             end_line: 1,
-                            annotation_level: 'failure',
+                            annotation_level: 'warning',
                             message: 'README.md must start with a header',
                             start_column: 1,
                             end_column: 1
