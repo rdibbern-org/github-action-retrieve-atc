@@ -50,7 +50,7 @@ async function checkFileStartsWithHeader(filePath) {
                 name: 'ATC Results',
                 head_sha: github.context.sha,
                 status: 'completed',
-                conclusion: 'warning',
+                conclusion: 'action_required',
                 output: {
                     title: 'README.md must start with a title',
                     summary: 'Please use markdown syntax to create a title',
@@ -59,7 +59,7 @@ async function checkFileStartsWithHeader(filePath) {
                             path: 'README.md',
                             start_line: 1,
                             end_line: 1,
-                            annotation_level: 'warning',
+                            annotation_level: 'action_required',
                             message: 'README.md must start with a header',
                             start_column: 1,
                             end_column: 1
