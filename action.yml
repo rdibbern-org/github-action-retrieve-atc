@@ -1,0 +1,5 @@
+name: 'Retrieve ATC Results'
+description: 'An action that tries to retrieve the corresponding ATC results'
+runs:
+  using: 'node12'
+  main: 'index.js'
